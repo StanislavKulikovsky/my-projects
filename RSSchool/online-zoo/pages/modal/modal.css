@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:ital,wght@0,400;0,500;1,400&family=Rubik:wght@300;400;500&display=swap");
+
+.modal-background {
+  background-color: #000b;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+}
+.modal-account {
+  background-color: #ffffff;
+  width: 568px;
+  border-radius: 20px;
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+}
+.modal-account__sign-up {
+  height: 774px;
+  margin-top: -387px;
+}
+.modal-account__log-in {
+  height: 635px;
+  margin-top: -317.5px;
+}
+.modal-account_header {
+  width: 100%;
+  height: 125px;
+  background-color: #2a8086;
+  border-radius: 20px 20px 0 0;
+}
+.modal-account_header img {
+  position: relative;
+  top: 50%;
+  margin-top: -30px;
+  left: 50%;
+  margin-left: -29px;
+}
+.modal-account_switch {
+  width: 448px;
+  height: 75px;
+  margin: 0 auto;
+}
+.modal-account_switch-item {
+  width: 50%;
+  height: 75px;
+  display: inline-block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #0d444d;
+  text-align: center;
+  padding: 14px 8px 0px 0px;
+  background: none;
+  border: none;
+  border-bottom: #c5e1e6 2px solid;
+}
+.modal-account_switch-item__active {
+  border-bottom: #2a8086 2px solid;
+}
+.modal-account_socials {
+  margin: 32px auto 0;
+  width: 448px;
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+}
+.modal-account_socials-item {
+  width: 216px;
+  background: #ffffff;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2d2d2d;
+  border: none;
+}
+.modal-account_socials-google {
+  background: url(../../assets/icons/google-logo.svg) no-repeat;
+  background-position: 17px 15px;
+}
+.modal-account_socials-facebook {
+  background: url(../../assets/icons/facebook-logo.svg) no-repeat;
+  background-position: 17px 15px;
+  padding-left: 23px;
+}
+.modal-account_form {
+  padding-top: 33px;
+  width: 448px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.modal-account_form > * {
+  display: block;
+}
+.modal-account_label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #0d444d;
+}
+.modal-account_text-input {
+  margin-top: 7px;
+  margin-bottom: 19px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #0d444d;
+  height: 54px;
+  background: #ffffff;
+  box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+  border: none;
+}
+.modal-account_text-input:focus {
+  outline: none;
+}
+.modal-account_checkbox-wrapper {
+  padding-top: 7px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #2d2d2d;
+}
+.modal-account_checkbox-wrapper a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.modal-account_checkbox {
+  position: relative;
+  left: -3px;
+  top: -3px;
+  margin-right: 20px;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+.modal-account_send-button {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c5e1e6;
+  width: 448px;
+  height: 54px;
+  margin-top: 26px;
+
+  background: #2a8088;
+  box-shadow: 0px 2px 20px rgba(185, 213, 217, 0.6);
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+}
+.modal-account_send-button:focus {
+  outline: none;
+}
+.modal-account_send-button_non-active {
+  cursor: none;
+  pointer-events: none;
+
+  background: #97ced3;
+}
+.log-out {
+  background: #6cd0da;
+  box-shadow: 0px 2px 10px rgba(185, 213, 217, 0.6);
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  top: 2px;
+  left: 100%;
+  z-index: 2000;
+  margin-left: -100px;
+}
+.log-out:hover {
+  background: #00e946;
+  box-shadow: 0px 2px 10px rgba(95, 255, 95, 0.6);
+}
+.log-out p {
+  font-family: Roboto Mono;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3e4344;
+  width: 140px;
+  height: 23px;
+  text-align-last: center;
+}

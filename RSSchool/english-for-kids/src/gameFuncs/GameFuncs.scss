@@ -1,0 +1,30 @@
+.banner-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+.banner-container.win {
+  background-image: url('https://omoro.ru/wp-content/uploads/2018/05/smailik-ylibka-2.jpg');
+}
+.banner-container.lose {
+  background-image: url('https://omoro.ru/wp-content/uploads/2018/05/grystnii-smailik-1.jpg');
+}
+.banner-container.win .text-mistakes {
+  visibility: hidden;
+}
+.banner-container.lose .text-mistakes {
+  position: fixed;
+  left: 5%;
+  bottom: 50px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+}

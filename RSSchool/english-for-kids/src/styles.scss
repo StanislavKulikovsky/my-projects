@@ -1,0 +1,23 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1 {
+  display: none;
+}
+
+body * {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+a:hover {
+  color: yellowgreen;
+}

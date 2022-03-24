@@ -1,0 +1,195 @@
+body {
+  width: 100%;
+  background-color: #172727;
+  padding: 5px;
+  margin: 0;
+  position: relative;
+}
+
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  display: none;
+}
+
+.page-selector {
+  width: 540px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+.tools {
+  width: 340px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.button {
+  margin: 2px;
+  width: 80px;
+  height: 14px;
+  font-size: 14px;
+  align-items: center;
+  text-align: center;
+  line-height: 14px;
+  display: block;
+  border: 3px solid #363636;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+._button-green {
+  background-color: rgb(112, 223, 8);
+}
+
+._button-gray {
+  background-color: gray;
+}
+
+.input-color {
+  display: inline-block;
+  width: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #363636;
+  border: none;
+  padding: 0px 2px;
+  margin: 2px;
+  height: 20px;
+}
+
+.input-text {
+  border: 3px solid #363636;
+  border-radius: 10px;
+  width: 168px;
+  height: 14px;
+  margin: 2px;
+  padding: 0 0 0 5px;
+  font-size: 14px;
+}
+
+._disable {
+  background-color: #36363660;
+  border-color: #36363680;
+  pointer-events: none;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+.label {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  top: -5px;
+}
+
+.cars-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cars-list_item {
+  width: 100%;
+  min-width: 300px;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed #ffffff;
+  position: relative;
+}
+.list_item-tools {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 180px;
+}
+.car-name {
+  position: absolute;
+  left: 180px;
+  padding: 10px;
+  line-height: 20px;
+  font-size: 20px;
+  color: #17ff02;
+  font-weight: 600;
+}
+.cars-page-selector {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+.car-svg {
+  position: absolute;
+  left: 0%;
+  width: 9%;
+  max-height: 33px;
+  transition: 0.1s linear;
+}
+.track {
+  position: relative;
+  width: 90%;
+  height: 33px;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column-reverse;
+}
+.finish {
+  width: 40px;
+  height: 60px;
+  position: absolute;
+  left: 99%;
+  border-left: solid 3px #000000;
+  background: linear-gradient(to top, #17272700 60%, red 40%);
+}
+.qtrack:hover .car-svg {
+  transform: translate(1110%, 0);
+}
+
+.winners-page-selector {
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
+}
+.table tr#n0 td {
+  background-color: #0000ff;
+}
+.table {
+  color: #ffffff;
+}
+
+.table td {
+  padding: 1px 5px;
+  position: relative;
+}
+
+.svg {
+  width: 40px;
+}
+
+.win-message {
+  font-size: 60px;
+  color: red;
+  position: absolute;
+  z-index: 1000;
+  left: 200px;
+  top: 160px;
+}
+.wins-active,
+.best-time-active {
+  cursor: pointer;
+}
+._up::after {
+  content: ' ↑';
+}
+
+._down::after {
+  content: ' ↓';
+}

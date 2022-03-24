@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.menu {
+  z-index: 2;
+  height: 100%;
+  width: 320px;
+  position: absolute;
+  background: linear-gradient(#0099ae 0%, #00bf82 100%);
+  left: 0%;
+  top: 0%;
+  transition: 0.3s linear;
+  transform: translateX(-320px);
+  display: flex;
+  flex-direction: column;
+}
+.menu.is-active {
+  transform: translateX(0px);
+}
+ul {
+  padding: 0px 0 0px 60px;
+  list-style: none;
+  margin: 0;
+  margin-top: 60px;
+}
+li {
+  text-align: left;
+  height: 22px;
+  margin-bottom: 31px;
+}
+li.is-active {
+  text-decoration: underline;
+}
+.menu a {
+  display: block;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: left;
+  color: #ffffff;
+  height: 22px;
+  text-decoration: none;
+  display: block;
+}
+.button-login-container {
+  height: 100%;
+  min-height: 60px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+.button-login {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: left;
+  color: #ffffff;
+  height: 60px;
+  width: 140px;
+  border: solid 2px #ffffff;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  cursor: pointer;
+  position: sticky;
+  left: 40px;
+  bottom: 20px;
+  top: 20px;
+}
+
+.item-stats a {
+  color: #008000;
+}

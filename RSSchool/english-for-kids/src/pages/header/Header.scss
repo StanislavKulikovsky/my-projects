@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.header {
+  margin: auto;
+  width: 90%;
+  text-align: center;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(6, 100, 2);
+  flex-direction: column;
+}
+
+.top-wrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.middle-wrapper {
+  width: 100%;
+}
+
+// анимация отсюда: https://onetwostudy.com/css-animaciya-ikonki-gamburger-menyu/
+.hamburger {
+  flex: 0 60px;
+  height: 60px;
+  min-width: 60px;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s linear;
+  z-index: 3;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  top: 26px;
+  left: 6px;
+  right: 6px;
+  height: 6px;
+  background: #00000033;
+}
+.hamburger span::before,
+.hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #00000033;
+  content: '';
+}
+.hamburger span::before {
+  top: -14px;
+}
+.hamburger span::after {
+  bottom: -14px;
+}
+.hamburger span {
+  transition: background 0s 0.3s;
+}
+.hamburger span::before,
+.hamburger span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+.hamburger span::before {
+  transition-property: top, transform;
+}
+.hamburger span::after {
+  transition-property: bottom, transform;
+}
+
+.hamburger.is-active {
+  transform: translate(140px);
+}
+@media (max-width: 800px) {
+  .hamburger.is-active {
+    transform: translate(200px);
+  }
+}
+.hamburger.is-active span {
+  background: none;
+}
+.hamburger.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.hamburger.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+.hamburger.is-active span::before,
+.hamburger.is-active span::after {
+  background-color: #686868;
+  transition-delay: 0s, 0.3s;
+}
+
+.switch-mode {
+  height: 40px;
+  width: 90px;
+  align-items: center;
+  color: #ffffff;
+  background-color: #2bff00;
+  position: relative;
+  border-radius: 100px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+
+.switch-mode:hover .switch-circle {
+  background-color: #d17f7f;
+}
+.switch-mode.is-active {
+  background-color: #8ddbd7;
+  text-align: right;
+}
+
+.switch-circle {
+  width: 24px;
+  height: 24px;
+  background-color: #ffffff;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border-radius: 100px;
+  transition: 0.1s linear;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.switch-mode.is-active .switch-circle {
+  transform: translateX(-50px);
+}
+
+.switch-text {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  position: relative;
+  padding: 0 10px;
+  margin-top: 8px;
+}
+
+.header-text {
+  flex: 1 auto;
+}
+
+.play-elem-wrapper {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.button-start-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.button-start {
+  margin-right: 20px;
+  width: 92px;
+  height: 92px;
+  color: #ffffff;
+  background-color: #00bf9a;
+  background: 10px 10px #00bf9a no-repeat;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 92px;
+  text-align: center;
+  border-radius: 46px;
+  cursor: pointer;
+  transition: 0.5s linear;
+  transform: scale(0);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.button-start.is-active {
+  color: #ffffff00;
+  font-size: 0;
+  background-color: #00bf9a;
+  background: url('./assets/restart.svg') #00bf9a no-repeat 10px 10px;
+  transform: rotatey(360deg);
+  transform: scale(0);
+}
+.button-start.is-visible {
+  transform: scale(1);
+}
+
+.bottom-wrapper {
+  height: 34px;
+  width: 90vw;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+  overflow: hidden;
+}
+.star-correct {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  background: url('./assets/star_correct.svg') transparent;
+}
+.star-wrong {
+  width: 34px;
+  min-width: 34px;
+  height: 34px;
+  background: url('./assets/star_wrong.svg') transparent;
+}

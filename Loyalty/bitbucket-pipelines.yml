@@ -1,0 +1,31 @@
+image: stanislavkulikovsky/firebase:node14
+
+pipelines:
+    branches:
+        develop:
+            - step:
+                  name: Test functions
+                  caches:
+                      - node
+                  script:
+                      - cd ./functions
+                      - git submodule update --recursive --init
+                      - npm ci
+                      - firebase functions:config:set process.env=LOCAL
+                      - npm test
+            - step:
+                  name: Deploy to TEST environment
+                  deployment: test
+                  trigger: manual
+                  script:
+                      - cd ./functions
+                      - git submodule update --recursive --init
+                      - npm ci
+                      - firebase functions:config:set process.env=TEST
+                      - cd ../
+                      - pipe: atlassian/firebase-deploy:1.3.0
+                        variables:
+                            KEY_FILE: $FIREBASE_KEY_FILE
+                            PROJECT_ID: $FIREBASE_PROJECT_ID
+                            EXTRA_ARGS: "--only functions"
+                            DEBUG: "true"
